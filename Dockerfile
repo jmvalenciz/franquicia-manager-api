@@ -12,8 +12,7 @@ FROM openjdk:21-jdk-slim
 
 WORKDIR /app
 
-ARG JAR_FILE=target/*.jar
-COPY ${JAR_FILE} app.jar
+COPY --from=build /app/target/*.jar app.jar
 
 ENV PORT=8080
 ENV DB_HOST=127.0.0.1
