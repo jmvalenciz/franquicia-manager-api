@@ -1,4 +1,4 @@
-package com.nequi.franquicias.franquicias;
+package com.nequi.franquicias.App;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
