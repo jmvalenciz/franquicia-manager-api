@@ -13,5 +13,5 @@ jobs:
           echo $CR_PAT | docker login ghcr.io -u jmvalenciz --password-stdin
       - name: Build and push the image
         run: |
-          docker build . --tag ghcr.io/jmvalenciz/franquicia-manager-api:latest
-          docker push ghcr.io/jmvalenciz/franquicia-manager-api:latest
+          docker build . --tag ghcr.io/jmvalenciz/franquicias-manager-api:latest
+          docker push ghcr.io/jmvalenciz/franquicias-manager-api:latest
