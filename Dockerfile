@@ -23,4 +23,4 @@ ENV DB_PORT=5432
 
 EXPOSE 8080
 
-ENTRYPOINT ["java", "-jar", "franquicias-manager-api.jar"]
+ENTRYPOINT ["java", "-jar", "app.jar"]
