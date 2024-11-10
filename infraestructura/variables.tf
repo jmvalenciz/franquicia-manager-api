@@ -34,3 +34,9 @@ variable "db_password" {
   default = "test_password"
   sensitive = true
 }
+
+variable "ssh_key_path" {
+  type = string
+  description = "Ssh ke to configure the instances"
+  default = "~/.ssh/franquicias-manager-key.pub"
+}

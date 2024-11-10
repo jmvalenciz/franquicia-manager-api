@@ -1,18 +1,9 @@
-FROM maven:3.9.8-eclipse-temurin-21-alpine AS build
-
-WORKDIR /app
-
-COPY pom.xml .
-RUN mvn dependency:go-offline
-
-COPY src ./src
-RUN mvn clean package -DskipTests
-
 FROM openjdk:21-jdk-slim
 
 WORKDIR /app
 
-COPY --from=build /app/target/*.jar app.jar
+ARG JAR_FILE=target/*.jar
+COPY ${JAR_FILE} app.jar
 
 ENV PORT=8080
 ENV DB_HOST=127.0.0.1
