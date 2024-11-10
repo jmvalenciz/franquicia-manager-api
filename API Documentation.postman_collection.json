@@ -1,0 +1,463 @@
+{
+	"info": {
+		"_postman_id": "96e2e144-583f-4aac-8d29-c3513a9814bd",
+		"name": "API Documentation",
+		"description": "This template contains a boilerplate for documentation that you can quickly customize and reuse.\n\n### How to use this template:\n\n- Replace the content given brackets (()) with your API's details.\n- Tips are formatted in `codespan` - feel free to read and remove them.\n    \n\n---\n\n`Start with a brief overview of what your API offers.`\n\nThe ((product name)) provides many API products, tools, and resources that enable you to ((add product value here)).\n\n`You can also list the APIs you offer, link to the relevant pages, or do both in this section.`\n\n## **Getting started guide**\n\n`List the steps or points required to start using your APIs. Make sure to cover everything required to reach success with your API as quickly as possible.`\n\nTo start using the ((add APIs here)), you need to -\n\n`The points given below are from The Postman API's documentation. You can reference it to write your own getting started guide.`\n\n- You must use a valid API Key to send requests to the API endpoints. You can get your API key from Postman's [integrations dashboard](https://go.postman.co/settings/me/api-keys).\n- The API has [rate and usage limits](https://learning.postman.com/docs/developer/postman-api/postman-api-rate-limits/).\n- The API only responds to HTTPS-secured communications. Any requests sent via HTTP return an HTTP 301 redirect to the corresponding HTTPS resources.\n- The API returns request responses in JSON format. When an API request returns an error, it is sent in the JSON response as an error key.\n    \n\n## Authentication\n\n`Add details on the authorization keys/tokens required, steps that cover how to get them, and the relevant error codes.`\n\nThe ((product name)) API uses ((add your API's authorization type)) for authentication.\n\n`The details given below are from the Postman API's documentation. You can reference it to write your own authentication section.`\n\nPostman uses API keys for authentication. You can generate a Postman API key in the [API keys](https://postman.postman.co/settings/me/api-keys) section of your Postman account settings.\n\nYou must include an API key in each request to the Postman API with the X-Api-Key request header.\n\n### Authentication error response\n\nIf an API key is missing, malformed, or invalid, you will receive an HTTP 401 Unauthorized response code.\n\n## Rate and usage limits\n\n`Use this section to cover your APIs' terms of use. Include API limits, constraints, and relevant error codes, so consumers understand the permitted API usage and practices.`\n\n`The example given below is from The Postman API's documentation. Use it as a reference to write your APIs' terms of use.`\n\nAPI access rate limits apply at a per-API key basis in unit time. The limit is 300 requests per minute. Also, depending on your plan, you may have usage limits. If you exceed either limit, your request will return an HTTP 429 Too Many Requests status code.\n\nEach API response returns the following set of headers to help you identify your use status:\n\n| Header | Description |\n| --- | --- |\n| `X-RateLimit-Limit` | The maximum number of requests that the consumer is permitted to make per minute. |\n| `X-RateLimit-Remaining` | The number of requests remaining in the current rate limit window. |\n| `X-RateLimit-Reset` | The time at which the current rate limit window resets in UTC epoch seconds. |\n\n### 503 response\n\nAn HTTP `503` response from our servers indicates there is an unexpected spike in API access traffic. The server is usually operational within the next five minutes. If the outage persists or you receive any other form of an HTTP `5XX` error, [contact support](https://support.postman.com/hc/en-us/requests/new/).\n\n### **Need some help?**\n\n`Add links that customers can refer to whenever they need help.`\n\nIn case you have questions, go through our tutorials ((link to your video or help documentation here)). Or visit our FAQ page ((link to the relevant page)).\n\nOr you can check out our community forum, there’s a good chance our community has an answer for you. Visit our developer forum ((link to developer forum)) to review topics, ask questions, and learn from others.\n\n`You can also document or add links to libraries, code examples, and other resources needed to make a request.`",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9220420"
+	},
+	"item": [
+		{
+			"name": "Franquicias",
+			"item": [
+				{
+					"name": "Get Franquicia By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/franquicia/:id",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"franquicia",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "a9df1eff-8bdb-443b-860b-75937b218b45"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Franquicia By Nombre",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/franquicia/nombre/:nombre",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"franquicia",
+								"nombre",
+								":nombre"
+							],
+							"variable": [
+								{
+									"key": "nombre",
+									"value": "McDonnalds"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Franquicia",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nombre\": \"McDonnalds\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/franquicia/",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"franquicia",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Franquicia",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":\"a9df1eff-8bdb-443b-860b-75937b218b45\",\n    \"nombre\": \"McDonnalds3\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/franquicia/",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"franquicia",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Sucursales",
+			"item": [
+				{
+					"name": "Get Sucursal By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/sucursal/:id",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"sucursal",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "cae07b8b-2f17-4772-ae2d-35c6f0ee0c7e"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Sucursal By Nombre",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/sucursal/nombre/:nombre",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"sucursal",
+								"nombre",
+								":nombre"
+							],
+							"variable": [
+								{
+									"key": "nombre",
+									"value": "McDonnalds - Centro"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Sucursal",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"franquiciaId\": \"ed94d85a-a31b-4609-b95b-19aa21240a59\",\n    \"nombre\": \"McDonnalds - Chinatown\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/sucursal/",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"sucursal",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Sucursal",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":\"cae07b8b-2f17-4772-ae2d-35c6f0ee0c7e\",\n    \"nombre\": \"McDonnalds - Centro\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/sucursal/",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"sucursal",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Productos",
+			"item": [
+				{
+					"name": "Get producto By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/producto/:id",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"producto",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "200"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Productos by Sucursal",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/producto/sucursal/:sucursalId",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"producto",
+								"sucursal",
+								":sucursalId"
+							],
+							"variable": [
+								{
+									"key": "sucursalId",
+									"value": "8c8caa35-0505-47f2-a653-0387ee2597c7"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create producto",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"sucursalId\": \"8c8caa35-0505-47f2-a653-0387ee2597c7\",\n    \"nombre\": \"Test Burguer\",\n    \"stock\": 42\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/producto/",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"producto",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update producto",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":\"201\",\n    \"nombre\": \"Test Burguer2\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/producto/",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"producto",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update producto stock",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "320",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/producto/stock/201",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"producto",
+								"stock",
+								"201"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Producto",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/producto/201",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"producto",
+								"201"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Max stock por sucursal",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/producto/max_stock/franquicia/:franquicia_id",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"producto",
+								"max_stock",
+								"franquicia",
+								":franquicia_id"
+							],
+							"variable": [
+								{
+									"key": "franquicia_id",
+									"value": "2236fd82-75a7-471e-bcc7-4acb7c93a563"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": [
+			{
+				"key": "key",
+				"value": "X-API-Key",
+				"type": "string"
+			},
+			{
+				"key": "value",
+				"value": "{{token}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "https://farming-simulator.pstmn.io"
+		}
+	]
+}

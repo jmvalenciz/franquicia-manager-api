@@ -36,6 +36,8 @@ Y finalmente, iniciamos el proyecto:
 make run
 ```
 
+Y para validar las apis, se puede importar el archivo `API Documentation.postman_collection.json` a postman
+
 ## Despliegue
 
 Para realizar el despliegue, lo primero que vamos a hacer es asegurarnos de tener las dependencias necesarias instalasdas:
